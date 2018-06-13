@@ -7,12 +7,17 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	if (message.content.startsWith("ok")) {
-		if (message.channel.id === "456502156439322624"){
+	var msg = message.content.toLowerCase();
+	if (msg === "taupe gun") {
+		message.channel.sendMessage("https://media.giphy.com/media/l0MYF9lyLHvVBPiog/giphy.gif");
+	}
+	if (message.channel.id === "456502156439322624") {
+		message.delete();
+		console.log('supprimer')
+		if (msg === "ok") {
 			message.member.addRole(message.guild.roles.get("454327071531991045"));
-			message.delete();
 		}
 	}
 });
 
-client.login('NDU0Mjk5NzM1NTEyMDU1ODA4.Dfsv3g.qNoqVF0C8dM1iCBHbiwCAgJ');
+client.login(TOKENHERE);
