@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const server = client.guilds.get("447117906141118464");
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
